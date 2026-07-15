@@ -1,22 +1,35 @@
 # Aviso
 
-**Ian Xiaohei Illustrations** é uma skill de agente de IA criada por Ian e adaptada neste repositório para uso no **Grok Build** (ferramentas `image_gen` e `image_edit`).
+## Este repositório
 
-Esta adaptação local inclui um **hub de roteamento** para os projetos irmãos oficiais:
+Fork / adaptação **português BR + Grok Build** publicado em:
 
-- [ian-xiaohei-scenes](https://github.com/helloianneo/ian-xiaohei-scenes) (Xiaohei 2.0)
-- [ian-handdrawn-ppt](https://github.com/helloianneo/ian-handdrawn-ppt)
+- <https://github.com/ggampp/ian-xiaohei-illustrations>
 
-Os modos condensados (`mode-scenes.md`, `mode-handdrawn-ppt.md`) resumem o espírito desses projetos para execução no Grok; a autoria e o crédito visual permanecem de Ian. Preferir os repositórios oficiais para a skill completa de cada modo.
+Mantenedor da adaptação: **Guilherme Pimentel** (<https://github.com/ggampp>).
 
-As imagens de exemplo em `examples/images/` e `ian-xiaohei-illustrations/assets/examples/` foram geradas por Ian e entram no pacote como **calibração de estilo**, não como templates de composição.
+Inclui hub de roteamento para:
 
-O personagem recorrente **小黑 (Xiaohei)** faz parte da linguagem visual de Ian para ilustrações de artigos. Ao redistribuir ou adaptar este repositório, mantenha o nome **Ian Xiaohei Illustrations** ou atribua crédito a Ian na documentação derivada.
+- <https://github.com/ggampp/ian-xiaohei-scenes>
+- <https://github.com/ggampp/ian-handdrawn-ppt>
 
-Links do autor:
+## Upstream e créditos
 
-- GitHub: <https://github.com/helloianneo>
-- Site: <https://www.ianneo.xyz/opc>
-- X/Twitter: <https://x.com/ianneo_ai>
+Skill e IP visual **小黑 (Xiaohei)** criados por **Ian**:
 
-Adaptação para português BR e Grok Build: mantida neste fork/workspace local conforme necessidade do usuário.
+- Illustrations: <https://github.com/helloianneo/ian-xiaohei-illustrations>
+- Scenes: <https://github.com/helloianneo/ian-xiaohei-scenes>
+- Handdrawn PPT: <https://github.com/helloianneo/ian-handdrawn-ppt>
+- Site: <https://www.ianneo.xyz>
+- X: <https://x.com/ianneo_ai>
+
+## Imagens
+
+| Pasta | Origem |
+|-------|--------|
+| `assets/sap-rap-vs-tachyonix-illustrations/` | Exemplos gerados neste fork (Grok) |
+| `assets/grok-skill-test/` | Smoke test dos 3 modos (Grok) |
+| `examples/images/` e `ian-xiaohei-illustrations/assets/examples/` | Calibração de estilo do **upstream** (Ian) — não templates de composição |
+| `assets/ian-wechat-qr.jpg` | Contato do autor original (Ian) |
+
+Ao redistribuir, preserve a atribuição a Ian pelo conceito/IP e a MIT License.

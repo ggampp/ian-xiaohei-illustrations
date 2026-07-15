@@ -1,133 +1,126 @@
-﻿# Ian Xiaohei Illustrations (hub visual Ian)
+# Ian Xiaohei Illustrations (PT-BR · Grok)
 
 > Transforme julgamentos, fluxos, estados e metáforas de um artigo em ilustrações de corpo de texto: fundo branco, traço à mão, absurdas mas limpas.
 >
-> 16:9 horizontal | IP Xiaohei 1.0 | mão livre em branco puro | poucas anotações vermelho/laranja/azul | **Grok Build** (`image_gen` / `image_edit`)
+> 16:9 horizontal · IP Xiaohei 1.0 · anotações curtas (PT-BR) · **Grok Build** (`image_gen` / `image_edit`)
 >
-> **Hub:** também roteia e executa (modo condensado) **[Xiaohei Scenes 2.0](https://github.com/helloianneo/ian-xiaohei-scenes)** e **[Handdrawn PPT](https://github.com/helloianneo/ian-handdrawn-ppt)**.
+> **Hub:** também roteia **Scenes 2.0** e **Handdrawn PPT** (skills irmãs neste workspace).
+
+**Este repositório** = adaptação **português BR + Grok** mantida em [ggampp/ian-xiaohei-illustrations](https://github.com/ggampp/ian-xiaohei-illustrations).
+
+Conceito, IP **小黑 (Xiaohei)** e skill original: **Ian** — [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations) (MIT).
 
 ---
 
-## O que é este repositório
+## O que é
 
-**Ian Xiaohei Illustrations** é uma skill de agente para projetar e gerar ilustrações de corpo de texto (artigos, posts, blogs, Notion, metodologias) no estilo **Xiaohei 1.0** (rascunho de quadro).
+Skill de agente para **ilustrações de corpo de texto** no estilo Xiaohei 1.0 (rascunho de quadro). Não é template de PPT nem ilustração comercial: o fluxo é achar a **âncora cognitiva** e desenhar **um** julgamento, fluxo ou metáfora memorável.
 
-Neste fork local (PT-BR + Grok), o pacote funciona como **hub da família visual Ian**:
+Como **hub** da família visual:
 
-| Modo | Projeto | Quando |
-|------|---------|--------|
-| `illustrations` | Este repo (1.0) | Método, fluxo, estrutura, comparação de produto |
-| `scenes` | [ian-xiaohei-scenes](https://github.com/helloianneo/ian-xiaohei-scenes) (2.0) | Situação humana, objeto real, long-scroll de trajetória |
-| `handdrawn-ppt` | [ian-handdrawn-ppt](https://github.com/helloianneo/ian-handdrawn-ppt) | Capa 20:9 (Grok) + páginas PNG “tipo PPT” (não gera PPTX) |
+| Modo | Repositório (fork PT-BR/Grok) | Quando usar |
+|------|------------------------------|-------------|
+| `illustrations` | **este** | Método, fluxo, estrutura, comparação de produto |
+| `scenes` | [ggampp/ian-xiaohei-scenes](https://github.com/ggampp/ian-xiaohei-scenes) | Situação humana, objeto real, long-scroll |
+| `handdrawn-ppt` | [ggampp/ian-handdrawn-ppt](https://github.com/ggampp/ian-handdrawn-ppt) | Capa **20:9** + páginas PNG “tipo PPT” |
 
-O agente **escolhe o modo** (`references/ecosystem-routing.md`) e usa DNA/prompt do modo ativo. Com as skills irmãs instaladas em `~/.grok/skills/`, preferir o pacote oficial completo.
+Upstream (chinês / Codex), se quiser comparar:
 
-Não é prompt genérico nem template de infográfico. No 1.0 o fluxo é: achar a **âncora cognitiva** e desenhar **um** julgamento/fluxo/metáfora em 16:9.
+- [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations)
+- [helloianneo/ian-xiaohei-scenes](https://github.com/helloianneo/ian-xiaohei-scenes)
+- [helloianneo/ian-handdrawn-ppt](https://github.com/helloianneo/ian-handdrawn-ppt)
 
-IP padrão (modos Xiaohei): **小黑** — preto sólido, olhos brancos, pernas finas, expressão vazia; **faz a ação central**, não decora.
+IP Xiaohei: silhueta preta, olhos brancos, pernas finas, expressão vazia — **faz a ação central**, não decora.
 
-Em uma frase (1.0): **o agente não “coloca uma figurinha” — desenha o movimento cognitivo do texto.**
+---
+
+## Exemplos gerados neste fork (Grok)
+
+Amostra real do pipeline **PT-BR + `image_gen`**, tema S/4HANA / RAP vs Tachyonix (modo **illustrations**). Use como referência de estilo e densidade de rótulos — **não** como molde de composição.
+
+### Duas rotas no S/4HANA
+
+![Duas rotas no S/4HANA](assets/sap-rap-vs-tachyonix-illustrations/01-duas-rotas-s4hana.jpg)
+
+### Código IA e débito técnico
+
+![Código IA e débito técnico](assets/sap-rap-vs-tachyonix-illustrations/02-ia-codigo-debito.jpg)
+
+### Motor determinístico
+
+![Motor determinístico](assets/sap-rap-vs-tachyonix-illustrations/03-motor-deterministico.jpg)
+
+### Fiori e Clean Core
+
+![Fiori e Clean Core](assets/sap-rap-vs-tachyonix-illustrations/04-fiori-clean-core.jpg)
+
+### Feature acorrentada ao upgrade
+
+![Feature acorrentada ao upgrade](assets/sap-rap-vs-tachyonix-illustrations/05-upgrade-acoplado.jpg)
+
+### Sinergia: specs → apps
+
+![Sinergia specs e apps](assets/sap-rap-vs-tachyonix-illustrations/06-sinergia-specs-apps.jpg)
+
+### Manutenção e ciclo de vida
+
+![Manutenção e ciclo de vida](assets/sap-rap-vs-tachyonix-illustrations/07-manutencao-ciclo-de-vida.jpg)
+
+Pasta: `assets/sap-rap-vs-tachyonix-illustrations/`.
+
+---
+
+## Teste dos três modos (mesmo hub)
+
+Smoke test após instalar as skills no Grok:
+
+| Modo | Arquivo |
+|------|---------|
+| Illustrations 1.0 | ![Illustrations](assets/grok-skill-test/01-illustrations-motor-deterministico.jpg) |
+| Scenes 2.0 | ![Scenes](assets/grok-skill-test/02-scenes-manutencao-custom.jpg) |
+| Handdrawn PPT (página) | ![PPT page](assets/grok-skill-test/03-handdrawn-ppt-runtime-page.jpg) |
+| Handdrawn PPT (capa 20:9) | ![PPT cover](assets/grok-skill-test/04-handdrawn-ppt-capa-20x9.jpg) |
+
+Pasta: `assets/grok-skill-test/`.
+
+> Os PNGs em `examples/images/` e `ian-xiaohei-illustrations/assets/examples/` vêm do **upstream** (Ian) e servem só como calibração de traço/vazio na skill — o README desta página prioriza os exemplos **deste fork**.
 
 ---
 
 ## Para quem serve
 
-**Serve para:**
+**Serve:** artigos/metodologia em português, workflows de IA, metáforas de produto, uso estável no **Grok**.
 
-- quem escreve artigos e precisa de ilustrações de corpo de texto  
-- conteúdo de conhecimento, metodologia e workflows de IA  
-- transformar julgamento abstrato em metáfora concreta  
-- estilo mais leve e estranho que PPT, com identidade  
-- quem usa **Grok** e quer reutilizar uma linguagem visual estável  
-
-**Não serve para:**
-
-- ilustração comercial / KV de marca  
-- fluxograma formal ou arquitetura densa  
-- cartoon infantil / mascote fofo  
-- despejar parágrafo inteiro ou “página de curso” numa imagem  
-- precisar de SVG editável de produção  
+**Não serve:** KV comercial, fluxograma formal denso, cartoon fofo, SVG editável, despejar parágrafo na imagem.
 
 ---
 
 ## O que entrega
 
-**Padrão:**
+- Ilustrações **16:9** (corpo); capa PPT / long-scroll em **20:9** (a API Grok **não** aceita `21:9`)
+- Shot list 4–8 itens; PNG via `image_gen`
+- Pasta sugerida: `assets/<slug>-illustrations/`
 
-- ilustrações **16:9**  
-- shot list de **4–8** itens por artigo  
-- tema, ideia, estrutura, ação do Xiaohei e rótulos sugeridos  
-- PNG via `image_gen`, organizados em `assets/<slug>-illustrations/`  
-
-**Não entrega por padrão:**
-
-- PPTX / PDF / Keynote  
-- SVG / HTML editável  
-- poster comercial  
-- infográfico cheio de texto  
+**Não** entrega por padrão: PPTX, PDF, SVG.
 
 ---
 
-## Estilo visual
+## Estilo (modo illustrations)
 
-- fundo **branco puro** (sem textura, sombra, gradiente)  
-- traço preto à mão, linha fina, leve tremer  
-- muito vazio; sujeito ~40–60% do quadro  
-- poucas anotações manuscritas (PT-BR ou chinês conforme o texto) em vermelho / laranja / azul  
-- uma imagem = um núcleo  
-- Xiaohei na ação central  
-- absurdo e limpo — não infantil  
-
----
-
-## Exemplos de estilo
-
-### Dois breakpoints
-
-![Dois breakpoints](examples/images/01-two-breakpoints.png)
-
-### Separar por propósito
-
-![Separar por propósito](examples/images/02-sort-by-purpose.png)
-
-### Um peixe, vários usos
-
-![Um peixe, vários usos](examples/images/03-one-fish-many-uses.png)
-
-### Caminho de handoff
-
-![Caminho de handoff](examples/images/04-handoff-path.png)
-
-### Poço de informação
-
-![Poço de informação](examples/images/05-information-well.png)
-
-### Prensa de ideias
-
-![Prensa de ideias](examples/images/06-idea-press.png)
-
-### Fermentação de conteúdo
-
-![Fermentação de conteúdo](examples/images/07-content-fermentation.png)
-
-### Ponte de confiança
-
-![Ponte de confiança](examples/images/08-trust-bridge.png)
-
-Estas imagens calibram densidade de traço, vazio, cor e participação do Xiaohei. **Não** copie composição nem objetos — invente metáfora nova a cada artigo.
+- Fundo branco puro  
+- Traço preto à mão, muito vazio (~40–60% de sujeito)  
+- Poucos rótulos manuscritos em vermelho / laranja / azul  
+- Uma imagem = um núcleo; Xiaohei na ação  
 
 ---
 
 ## Instalação no Grok Build
 
-Clone o repositório:
-
 ```bash
-git clone https://github.com/helloianneo/ian-xiaohei-illustrations.git
+git clone git@github-pessoal:ggampp/ian-xiaohei-illustrations.git
+# ou: git clone https://github.com/ggampp/ian-xiaohei-illustrations.git
 cd ian-xiaohei-illustrations
 ```
-
-Copie a skill para a pasta de skills do Grok:
 
 **Windows (PowerShell):**
 
@@ -144,24 +137,20 @@ mkdir -p "${HOME}/.grok/skills"
 cp -R ./ian-xiaohei-illustrations "${HOME}/.grok/skills/"
 ```
 
-O pacote instalável é o subdiretório:
+Skills irmãs (recomendado para o hub completo):
 
-```text
-ian-xiaohei-illustrations/
+```powershell
+# após clonar ggampp/ian-xiaohei-scenes e ggampp/ian-handdrawn-ppt
+Copy-Item -Recurse -Force ".\ian-xiaohei-scenes" "$env:USERPROFILE\.grok\skills\ian-xiaohei-scenes"
+Copy-Item -Recurse -Force ".\ian-handdrawn-ppt"  "$env:USERPROFILE\.grok\skills\ian-handdrawn-ppt"
 ```
 
-(README, LICENSE, NOTICE e `examples/` na raiz são documentação do repositório.)
-
-Uso no chat:
+Uso:
 
 ```text
-Use a skill ian-xiaohei-illustrations e gere 5 ilustrações absurdas do Xiaohei
+Use a skill ian-xiaohei-illustrations e gere 5 ilustrações do Xiaohei
 para este artigo em português (16:9, image_gen).
 ```
-
-### Codex (legado)
-
-Ainda é possível copiar o mesmo diretório para `${CODEX_HOME:-$HOME/.codex}/skills/`. O `SKILL.md` atual prioriza o runtime **Grok** (`image_gen` / `image_edit`).
 
 ---
 
@@ -171,37 +160,29 @@ Ainda é possível copiar o mesmo diretório para `${CODEX_HOME:-$HOME/.codex}/s
 
 ```text
 Use a skill ian-xiaohei-illustrations — não gere ainda.
-Analise o artigo e entregue um shot list (~5 imagens):
-parágrafo, tema, ideia, estrutura, ação do Xiaohei, rótulos.
+Shot list (~5): parágrafo, tema, ideia, estrutura, ação do Xiaohei, rótulos.
 
 <cole o artigo>
 ```
 
-### Gerar direto
+### Gerar
 
 ```text
 Use a skill ian-xiaohei-illustrations e gere 4 ilustrações do Xiaohei.
-16:9, fundo branco, traço à mão, poucas anotações em português.
+16:9, fundo branco, traço à mão, rótulos curtos em português.
 
 <cole o artigo>
 ```
 
-### Um conceito
+### Hub (rotear modos)
 
 ```text
-Use a skill ian-xiaohei-illustrations: uma ilustração 16:9 para
-“confiança se constrói evidência por evidência”.
-Xiaohei na ação central; absurdo e limpo.
+Use a skill ian-xiaohei-illustrations (hub):
+illustrations para método, scenes para dor de manutenção,
+handdrawn-ppt para 1 capa 20:9.
 ```
 
-### Editar (image_edit)
-
-```text
-Use a skill ian-xiaohei-illustrations e edite a imagem:
-remova o título “Fluxograma” no canto superior esquerdo; resto igual.
-```
-
-Mais exemplos: [examples/prompts.md](examples/prompts.md).
+Mais prompts: [examples/prompts.md](examples/prompts.md).
 
 ---
 
@@ -209,37 +190,13 @@ Mais exemplos: [examples/prompts.md](examples/prompts.md).
 
 | Tarefa | Ferramenta |
 |--------|------------|
-| Nova ilustração | `image_gen` + `aspect_ratio: "16:9"` |
-| Corrigir / reforçar Xiaohei / tirar título | `image_edit` |
-| Inspecionar resultado | `read_file` na imagem |
-| Consistência no lote | mesma descrição de IP; opcional: 1ª imagem como referência em `image_edit` |
-
-Fluxo resumido:
-
-1. Ler o texto e achar âncoras cognitivas  
-2. Shot list (se for só estratégia)  
-3. Para cada imagem: prompt do template + `image_gen` 16:9  
-4. QA (`references/qa-checklist.md`); `image_edit` se precisar  
-5. Salvar em `assets/<slug>-illustrations/`  
-6. Reportar caminhos e uso  
+| Nova imagem | `image_gen` + ratio (`16:9` ou `20:9`) |
+| Editar | `image_edit` |
+| QA visual | `read_file` na imagem |
 
 ---
 
-## Ecossistema (hub)
-
-```text
-Pedido → ecosystem-routing.md → modo
-  illustrations → style-dna + prompt-template + …
-  scenes        → mode-scenes.md  (± skill irmã completa)
-  handdrawn-ppt → mode-handdrawn-ppt.md (± skill irmã completa)
-  híbrido       → pastas separadas por modo
-```
-
-Aspect ratios no Grok: corpo 16:9 · capa PPT / long-scroll 20:9 (Grok).
-
----
-
-## Estrutura do repositório
+## Estrutura
 
 ```text
 .
@@ -247,65 +204,35 @@ Aspect ratios no Grok: corpo 16:9 · capa PPT / long-scroll 20:9 (Grok).
 ├── LICENSE
 ├── NOTICE.md
 ├── assets/
-│   └── ian-wechat-qr.jpg
+│   ├── sap-rap-vs-tachyonix-illustrations/   ← exemplos deste fork
+│   ├── grok-skill-test/                      ← smoke test 3 modos
+│   └── ian-wechat-qr.jpg                     ← QR do autor original (Ian)
 ├── examples/
-│   ├── images/
+│   ├── images/                               ← calibração upstream (Ian)
 │   └── prompts.md
-└── ian-xiaohei-illustrations/          ← skill instalável (hub)
+└── ian-xiaohei-illustrations/                ← skill instalável
     ├── SKILL.md
-    ├── agents/
-    │   └── openai.yaml
-    ├── assets/
-    │   └── examples/
-    └── references/
-        ├── ecosystem-routing.md      ← roteador 1.0 / 2.0 / PPT
-        ├── mode-scenes.md            ← Scenes 2.0 condensado (Grok)
-        ├── mode-handdrawn-ppt.md     ← Handdrawn PPT condensado (Grok)
-        ├── style-dna.md
-        ├── xiaohei-ip.md
-        ├── composition-patterns.md
-        ├── prompt-template.md
-        └── qa-checklist.md
+    ├── references/   (incl. ecosystem-routing, mode-scenes, mode-handdrawn-ppt)
+    └── assets/examples/                      ← calibração upstream na skill
 ```
 
 ---
 
 ## Cuidados
 
-- Rótulos curtos geram texto mais estável no modelo de imagem.  
-- Uma ideia por figura (ou por página, no modo PPT).  
-- Nos modos Xiaohei: se tirar o personagem e a metáfora ainda “funciona sozinha”, regenere.  
+- Rótulos curtos = texto mais estável no modelo de imagem.  
+- Uma ideia por figura.  
+- Se remover o Xiaohei e a metáfora “ainda funciona sozinha”, regenere.  
 - Exemplos = calibração, não molde.  
 - Não misture DNA 1.0 (traço) com 2.0 (props foto) no mesmo canvas.  
-- Espere typos ocasionais; se piorar, **reduza** o texto e regenere.  
 
 ---
 
-## Projetos relacionados (família Ian)
+## Créditos
 
-- [Ian Xiaohei Scenes](https://github.com/helloianneo/ian-xiaohei-scenes) — Xiaohei 2.0, objeto real + long-scroll  
-- [Ian Handdrawn PPT](https://github.com/helloianneo/ian-handdrawn-ppt) — páginas PNG estilo PPT técnico à mão  
-- [Awesome Claude Code Skills](https://github.com/helloianneo/awesome-claude-code-skills)  
-- [Obsidian + Claude AI Second Brain](https://github.com/helloianneo/obsidian-ai-second-brain)  
+| Papel | Quem |
+|-------|------|
+| Conceito, IP Xiaohei, skill original | [Ian (helloianneo)](https://github.com/helloianneo) · [ianneo.xyz](https://www.ianneo.xyz) |
+| Adaptação PT-BR, hub Grok, exemplos neste README | [Guilherme Pimentel (ggampp)](https://github.com/ggampp) |
 
----
-
-## Sobre o autor
-
-**Ian (伊恩)** — designer de produto / one-person company / AI builder  
-
-- GitHub: [helloianneo](https://github.com/helloianneo)  
-- X/Twitter: [@ianneo_ai](https://x.com/ianneo_ai)  
-- Site: [www.ianneo.xyz](https://www.ianneo.xyz)  
-- WeChat: `ianneoxyz`  
-- E-mail: hello.neoc@gmail.com  
-
-<p>
-  <img src="assets/ian-wechat-qr.jpg" alt="QR WeChat do Ian" width="120">
-</p>
-
----
-
-## Licença
-
-MIT License. Ver [LICENSE](LICENSE).
+Licença: **MIT** — ver [LICENSE](LICENSE) e [NOTICE.md](NOTICE.md).
