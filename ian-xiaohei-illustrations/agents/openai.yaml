@@ -1,6 +1,8 @@
+﻿# Metadados legados (Codex). No Grok Build use SKILL.md + image_gen/image_edit.
+# Hub: illustrations (1.0) + scenes (2.0) + handdrawn-ppt.
 interface:
-  display_name: "Ian 小黑配图"
-  short_description: "为中文文章生成怪诞清爽、有小黑IP的正文配图资产"
-  default_prompt: "Use $ian-xiaohei-illustrations to 为这篇中文文章设计并生成几张小黑怪诞正文配图。"
+  display_name: "Ian Visual Hub (Xiaohei + PPT)"
+  short_description: "Roteia e gera Illustrations 1.0, Scenes 2.0 e Handdrawn PPT via image_gen/image_edit"
+  default_prompt: "Use a skill ian-xiaohei-illustrations (hub Ian): roteie illustrations | scenes | handdrawn-ppt e gere no Grok com aspect_ratio adequado (16:9 corpo, 20:9 capa/long-scroll)."
 policy:
   allow_implicit_invocation: true

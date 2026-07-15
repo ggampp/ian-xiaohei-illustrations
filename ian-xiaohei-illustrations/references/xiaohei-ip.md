@@ -1,53 +1,56 @@
-# 小黑 IP
+# IP Xiaohei (小黑)
 
-## 角色定义
+## Definição
 
-小黑是 Ian 中文正文配图的固定视觉 IP。
+Xiaohei é o IP visual fixo das ilustrações de corpo de texto no estilo Ian.
 
-默认每张图都要出现小黑。小黑不是吉祥物，不是贴纸，不是可爱装饰，而是正在认真参与系统运转的荒诞工作者。
+Por padrão, **toda** imagem deve ter o Xiaohei. Não é mascote, adesivo nem enfeite: é um **operador absurdo** que participa de verdade do “sistema” desenhado.
 
-## 外形
+Personagem **fictício** — no Grok pode ser gerado com `image_gen` sem fluxo de “pessoa real”.
 
-- 黑色实心小怪物。
-- 白色圆点眼睛。
-- 细腿，偶尔有细胳膊。
-- 身体可以是圆柱、黑豆、黑盒、漏斗、影子、洞口、机器内部黑块。
-- 轮廓略微不规则，有手绘感。
-- 表情空、呆、冷静、认真。
+## Aparência
 
-## 性格
+- Pequeno monstro **preto sólido**.
+- Olhos redondos **brancos**.
+- Pernas finas; às vezes bracinhos finos.
+- Corpo: cilindro, feijão preto, caixinha, funil, sombra, buraco ou bloco preto dentro de máquina.
+- Contorno levemente irregular (mão livre).
+- Expressão vazia, sem graça, fria, séria (deadpan).
 
-- 很认真，但做的事有点荒诞。
-- 像一个低调的系统操作员。
-- 冷幽默，不卖萌。
-- 有点笨拙，但不蠢。
-- 像在白板草图里真的负责某个工作。
+## Personalidade
 
-## 常见职责
+- Muito sério; o trabalho é um pouco absurdo.
+- Operador de sistema discreto.
+- Humor seco; **não** faz gracinhas.
+- Um pouco desajeitado, mas não bobo.
 
-让小黑承担核心动作：
+## Funções comuns (ação central)
 
-- 搬运素材。
-- 拉线汇聚信息源。
-- 卡在断点里。
-- 在机器里操作“判断”杆。
-- 变成筛选漏斗。
-- 切开“素材鱼”。
-- 盖章承接话术。
-- 牵着承接路径。
-- 举警告牌看坑。
-- 从洞里伸手但接不住内容。
-- 在旁边搬砖、搭桥、开门、分拣、记录。
+- carregar material  
+- puxar fios que juntam fontes  
+- ficar preso em um breakpoint  
+- operar alavanca de “julgamento”  
+- virar funil de triagem  
+- fatiar / transformar “material bruto”  
+- carimbar scripts de handoff  
+- puxar caminho de handoff  
+- levantar placa de aviso  
+- esticar o braço e não alcançar o conteúdo  
+- carregar tijolos, construir ponte, abrir porta, separar, registrar  
 
-## 禁止
+## Proibido
 
-- 不要把小黑画成过度可爱的吉祥物。
-- 不要画成儿童卡通角色。
-- 不要给小黑复杂服装、表情包、闪亮眼睛。
-- 不要让小黑只是站在角落里看。
-- 不要让小黑抢走结构表达。
-- 不要把小黑画得太商业、太圆润、太精致。
+- Mascote excessivamente fofo / cartoon infantil.
+- Roupa complexa, emoji, olhos brilhantes.
+- Só no canto olhando.
+- Roubar o foco da estrutura conceitual.
+- Visual comercial, redondo e polido demais.
 
-## 判断标准
+## Critério
 
-如果去掉小黑，图的核心隐喻还能完全成立，说明小黑太装饰了；要重写提示词，让小黑成为动作主体。
+Se **remover** o Xiaohei e a metáfora **ainda funcionar sozinha**, ele está decorativo: reescreva o prompt ou use `image_edit` para colocá-lo na ação.
+
+## Consistência no Grok
+
+- Repita o bloco de aparência em cada `image_gen` do lote.
+- Para mais estabilidade: use a primeira imagem como referência em `image_edit`, pedindo **nova metáfora** e **mesmo personagem/estilo de traço**.

@@ -1,46 +1,48 @@
-# QA Checklist
+# Checklist de QA (Grok)
 
-## 必过项
+## Obrigatório (pass)
 
-- 是 16:9 横版。
-- 背景是干净白底。
-- 有小黑。
-- 小黑承担核心动作，不只是装饰。
-- 没有复刻旧案例构图，而是为当前文章生成了新隐喻。
-- 画面怪诞、有创意、有意思。
-- 简洁清爽，主体不超过画面约 60%。
-- 一张图只讲一个核心结构。
-- 中文标注少、短、能读。
-- 橙色只用于主路径或箭头。
-- 红色只用于重点、问题、提醒或结果。
-- 蓝色只用于补充说明、反馈或系统状态。
+- **16:9** horizontal.
+- Fundo **branco limpo**.
+- Tem **Xiaohei**.
+- Xiaohei na **ação central** (não só decoração).
+- Metáfora **nova** para o artigo (não clone de exemplo).
+- Absurdo, criativo, interessante.
+- Limpo: sujeito ≤ ~**60%** do quadro.
+- **Um** núcleo estrutural por imagem.
+- Rótulos **poucos, curtos, legíveis** (PT-BR ou chinês).
+- Laranja só em fluxo/setas; vermelho em alerta; azul em secundário.
 
-## 失败信号
+## Sinais de falha → ação no Grok
 
-出现以下情况，重生成或局部编辑：
+| Sinal | Ferramenta sugerida |
+|-------|---------------------|
+| Título no canto | `image_edit` — remover só o título |
+| Xiaohei fofo / canto | `image_edit` ou nova `image_gen` |
+| Cara de PPT / curso | regenerar com template “simplificar” |
+| Elementos/setas demais | regenerar com menos nós |
+| Texto longo ou ilegível | regenerar com ≤3–5 rótulos curtos |
+| Fundo sujo / textura | regenerar reforçando pure white |
+| Parecido com `assets/examples/` | regenerar trocando objeto + ação |
+| Precisa inspecionar texto/estilo | `read_file` na imagem gerada |
 
-- 左上角有“常见坑 / Workflow / 系统架构图 / 路线图”等标题。
-- 小黑像吉祥物、表情包或可爱卡通。
-- 画面像 PPT、课程课件、正式流程图。
-- 元素太多、箭头太多、节点太多。
-- 文字变成大段解释。
-- 背景有纸纹、阴影、渐变、米色、噪点。
-- 真实 UI 截图或科技感界面。
-- 中文错字严重或标注不可读。
-- 画面太死板，没有荒诞隐喻。
-- 和 `assets/examples/` 里的旧案例构图过于相似。
+## Como iterar
 
-## 迭代方法
+- **Comum demais:** Xiaohei sujeito + metáfora estranha coerente.  
+- **Complexo:** um movimento, 3–5 rótulos.  
+- **Fofo:** deadpan, not cute, not mascot.  
+- **PPT:** sem título, grade, setas em excesso.  
+- **Clone de exemplo:** mesma ideia, outro objeto e outra ação.  
+- **Texto errado:** edição local; se piorar, regenerar com menos texto.
 
-- 太普通：让小黑成为动作主体，加入一个奇怪但成立的隐喻。
-- 太复杂：删节点，只保留一个动作和 3-5 个短标注。
-- 太可爱：强调 deadpan、blank serious expression、not cute、not mascot。
-- 太 PPT：去掉标题、边框、整齐网格和过多箭头，改成手绘场景。
-- 太像旧案例：保留核心意思，换掉主物件和小黑动作。
-- 文字错：优先局部编辑；错得多就重生成并减少标注数量。
+## Entrega
 
-## 交付判断
+Bom: o leitor pensa “que estranho…” e em ~1s entende a estrutura.
 
-高质量图应该让读者先觉得“有点怪”，然后 1 秒内看懂结构。
+Ruim: parece página de tutorial em vez de rascunho absurdo de produto no papel branco.
 
-如果第一眼像教程页，而不是白纸上的怪诞产品草图，就不合格。
+## Entrega no workspace
+
+- Listar caminhos retornados pelo Grok (`images/…` ou path absoluto).  
+- Se o projeto pedir: copiar para `assets/<slug>-illustrations/01-….png`.  
+- Não sobrescrever assets sem confirmação.

@@ -1,106 +1,196 @@
----
+﻿---
 name: ian-xiaohei-illustrations
-description: 生成 Ian 风格的中文正文配图。用于用户要求为中文文章、帖子、博客、Notion 文档、工作流文档、方法论、流程、结构、状态、隐喻或观点生成“怪诞”“小黑”“手绘”“正文配图”“文章插图”“配图建议”“shot list”“去标题/改图”等任务；默认使用小黑 IP、纯白手绘、少量红橙蓝批注、简洁清爽但天马行空的视觉风格。
+description: >
+  Hub visual Ian no Grok Build: ilustrações Xiaohei 1.0 (whiteboard absurdo), cenas
+  Xiaohei 2.0 (objeto real + ação física, incl. long-scroll) e páginas handdrawn-PPT
+  (Capa 20:9 (Grok) + slides 16:9 em PNG). Use para artigos, posts, Notion, metodologia,
+  comparação de produto, dor de trabalho, retrospectiva, curso, “faça um PPT”, shot list,
+  capa, deck, “Xiaohei 2.0”, “cena com objeto real”. Roteia entre modos; ferramentas
+  image_gen e image_edit. Repos: ian-xiaohei-illustrations, ian-xiaohei-scenes,
+  ian-handdrawn-ppt (helloianneo).
+metadata:
+  short-description: "Hub Ian: Xiaohei 1.0 + Scenes 2.0 + Handdrawn PPT (Grok)"
 ---
 
-# Ian 小黑怪诞正文配图
+# Ian Visual Hub — Illustrations · Scenes · Handdrawn PPT (Grok)
 
-## 核心定位
+## Posicionamento
 
-为中文文章设计和生成 16:9 横版正文配图。目标不是做商业插画、PPT 信息图或可爱卡通，而是把文章里的关键判断、流程、结构、状态或隐喻，变成一张清爽、怪诞、有创意、可读但不说明书的手绘解释图。
+Esta skill é o **hub em português BR** para a família visual do Ian no **Grok Build**. Por padrão este repositório entrega o modo **Illustrations (Xiaohei 1.0)**, mas **deve contemplar e rotear** os projetos irmãos:
 
-默认视觉 IP 是“小黑”：黑色实心、白点眼、细腿、空表情，认真做一件荒诞但成立的事。小黑必须参与画面的核心动作，不能只是站在旁边当装饰。
+| Modo | Projeto | Repo |
+|------|---------|------|
+| `illustrations` | Ian Xiaohei Illustrations (1.0) | https://github.com/helloianneo/ian-xiaohei-illustrations |
+| `scenes` | Ian Xiaohei Scenes (2.0) | https://github.com/helloianneo/ian-xiaohei-scenes |
+| `handdrawn-ppt` | Ian Handdrawn PPT | https://github.com/helloianneo/ian-handdrawn-ppt |
 
-## 先读这些参考
+> URL com typos tipo `ian-xiaohei-scenesssssssssss` → tratar como **ian-xiaohei-scenes**.
 
-按任务需要读取，不要一次塞满上下文：
+### Em uma frase por modo
 
-- `references/style-dna.md`：风格 DNA、颜色、文字、禁忌。
-- `references/xiaohei-ip.md`：小黑 IP 的形象、性格、动作库和禁忌。
-- `references/composition-patterns.md`：结构类型、原创隐喻方法和反复刻规则。
-- `references/prompt-template.md`：单张生图提示词模板。
-- `references/qa-checklist.md`：生成后检查和迭代规则。
-- `assets/examples/`：只作低频视觉校准，不进入默认生成路径。不要照抄这些案例的构图、物件或标注。
+- **Illustrations 1.0:** julgamento/fluxo/estrutura → rascunho de quadro absurdo, traço preto, fundo branco puro, rótulos vermelho/laranja/azul. Xiaohei na ação conceitual.  
+- **Scenes 2.0:** situação humana → mini-set com **objeto real** + Xiaohei na ação física; opcional **long-scroll** de trajetória.  
+- **Handdrawn PPT:** material → **páginas PNG** estilo explicação técnica à mão (Capa 20:9 (Grok), corpo 16:9). Xiaohei em geral **não** entra.
 
-## 工作流
+## Passo 0 — Roteamento (obrigatório)
 
-### 1. 消化正文
-
-先读用户给的正文、链接、Notion 页面、Markdown 文件或截图内容。提炼：
-
-- 核心观点是什么
-- 哪些段落承担认知转折
-- 哪些内容适合用图解释
-- 哪些地方只适合文字，不需要图
-
-不要平均配图。优先选择“认知锚点”，例如：核心判断、两个断点、输入输出闭环、分流、前后对比、一鱼多吃、承接路径、常见坑、角色状态变化。
-
-### 2. 先出配图策略
-
-如果用户只是说“分析怎么配图 / 思考哪些地方需要配图”，先给 shot list。每张图写清楚：
-
-- 放在哪个段落后
-- 图的主题
-- 核心意思
-- 结构类型
-- 小黑在图里做什么
-- 建议元素
-- 建议中文标注词
-
-默认 4-8 张。文章很短时 1-3 张；长文也不要轻易超过 9 张。够用就好，避免把正文做成画册。
-
-### 3. 单张生成
-
-如果用户明确要求“生成 / 输出 / 做图 / 帮我生成”，不要停下来等确认；用内置 `image_gen` 每张单独生成。不要把多张图拼在一张里。
-
-每张图只讲一个核心结构。提示词必须包含：
-
-- 16:9 横版中文正文配图
-- 纯白背景
-- 黑色手绘线稿
-- 少量红色/橙色/蓝色中文手写批注
-- 大量留白
-- 小黑作为核心动作主体
-- 禁止 PPT、商业插画、幼稚可爱、复杂架构、左上角类型标题
-
-不要复刻过往案例。案例只提供风格密度和小黑参与方式，不能直接复用“传送带断点 / 小黑拉线 / 素材鱼 / 盖章工具箱 / 常见坑路径”等已有构图，除非用户明确要求复刻某张图。每次都要从当前文章重新发明一个奇怪但成立的隐喻。
-
-### 4. 检查与迭代
-
-生成后检查 `references/qa-checklist.md`。如果出现以下问题，优先重生成或局部编辑：
-
-- 小黑只是装饰
-- 画面太满
-- 太像流程图/PPT
-- 中文太多或错字严重
-- 左上角出现“常见坑/流程图/系统架构图”等标题
-- 画风太可爱、幼稚、死板
-- 背景不是干净白底
-
-### 5. 保存交付
-
-如果用户在 workspace 内工作，把最终图复制到：
+Antes de gerar, leia `references/ecosystem-routing.md` e declare o modo de cada entrega:
 
 ```text
-assets/<article-slug>-illustrations/
+Modo: illustrations | scenes | handdrawn-ppt | híbrido
+Submodo (se scenes): padrão 16:9 | long-scroll
+Submodo (se ppt): Capa 20:9 (Grok) | corpo 16:9 | deck N páginas
 ```
 
-按顺序命名：
+| Pedido do usuário | Modo |
+|-------------------|------|
+| Fluxo, método, Clean Core, comparação de produto, whiteboard | `illustrations` |
+| Dor, reunião, overload, “é sobre mim”, objeto real, Xiaohei 2.0 | `scenes` |
+| Trajetória, retrospectiva, evolução do produto em friso | `scenes` + long-scroll |
+| PPT, slides, curso, capa de artigo, deck | `handdrawn-ppt` |
+| Artigo completo com capa + método + dor | **híbrido** (pastas separadas) |
+
+Se ambíguo e a escolha mudar o resultado: **uma** pergunta curta. Senão, default = `illustrations`.
+
+**Não misture DNAs no mesmo canvas** (traço 1.0 + props foto 2.0, ou slide com título de PPT dentro de illustrations).
+
+## Runtime: Grok Build
+
+| Situação | Ferramenta |
+|----------|------------|
+| Nova imagem | `image_gen` + `aspect_ratio` adequado |
+| Editar | `image_edit` |
+| QA visual | `read_file` na imagem |
+| Consistência de personagem/deck | mesma descrição de IP/style lock; opcional ref em `image_edit` |
+
+### Aspect ratios
+
+| Modo | Ratio |
+|------|-------|
+| illustrations (corpo) | `16:9` |
+| scenes (padrão) | `16:9` |
+| scenes long-scroll | `20:9` (Grok; `21:9` inválido na API) |
+| handdrawn-ppt capa | `20:9` (Grok; `21:9` inválido na API) |
+| handdrawn-ppt corpo | `16:9` |
+
+Orientação geral de prompt Imagine: skill `imagine` do Grok; **DNA do modo escolhido** tem prioridade.
+
+## Mapa de referências
+
+Leia **só o necessário** do modo ativo:
+
+### Sempre (hub)
+
+- `references/ecosystem-routing.md` — decisão de modo e híbridos.
+
+### Modo `illustrations` (completo neste repo)
+
+- `references/style-dna.md`
+- `references/xiaohei-ip.md`
+- `references/composition-patterns.md`
+- `references/prompt-template.md`
+- `references/qa-checklist.md`
+- `assets/examples/` — calibração esporádica; não copiar composição.
+
+### Modo `scenes` (condensado neste repo)
+
+- `references/mode-scenes.md`
+- Se a skill irmã existir em `~/.grok/skills/ian-xiaohei-scenes/`, **prefira o SKILL.md e references oficiais**.
+
+### Modo `handdrawn-ppt` (condensado neste repo)
+
+- `references/mode-handdrawn-ppt.md`
+- Se existir `~/.grok/skills/ian-handdrawn-ppt/`, **prefira o pacote oficial**.
+
+## Fluxos por modo
+
+### A) Illustrations (1.0) — detalhe completo
+
+1. Digestão → âncoras cognitivas.  
+2. Shot list (se só planejar).  
+3. `image_gen` 16:9 por âncora (template em `prompt-template.md`).  
+4. QA `qa-checklist.md`; `image_edit` se preciso.  
+5. Salvar em `assets/<slug>-illustrations/`.
+
+Regras-chave: fundo branco puro; traço preto; Xiaohei na ação; ≤5–8 rótulos curtos; sem PPT; metáfora nova (não copiar `assets/examples/`).
+
+### B) Scenes (2.0) — ver `mode-scenes.md`
+
+1. Extrair **situação** + ação física + objeto real.  
+2. Shot list com ressonância (não só estrutura).  
+3. `image_gen` 16:9 (ou 20:9 long-scroll).  
+4. QA: mini-set real, Xiaohei na ação, sem inventário de props.  
+5. `assets/<slug>-scenes/` ou `…-long-scroll/`.
+
+### C) Handdrawn PPT — ver `mode-handdrawn-ppt.md`
+
+1. Intake + blueprint (título, ponto, arquétipo, texto exato).  
+2. Style lock do deck em todos os prompts.  
+3. Capa `20:9` + páginas `16:9`, uma `image_gen` cada.  
+4. QA de consistência de deck e texto curto.  
+5. `assets/<slug>-handdrawn-ppt/`.  
+6. **Não** entregar PPTX salvo pedido explícito fora desta skill.
+
+### D) Híbrido
+
+Declarar tabela frame → modo. Gerar por modo. Pastas separadas. Entregar mapa:
 
 ```text
-01-topic-name.png
-02-topic-name.png
+capa → handdrawn-ppt
+01–04 → illustrations
+05–06 → scenes
 ```
 
-保留原始生成文件，不要覆盖已有资产，除非用户明确要求替换。
+## Idioma
 
-## 输出口径
+| Origem do texto | Rótulos / títulos na imagem |
+|-----------------|----------------------------|
+| PT-BR | Português curto |
+| Chinês | Chinês curto |
+| Misto | Idioma dominante do trecho |
 
-生成前的策略输出要短而准。生成后的交付要包含：
+Modelos de imagem falham com texto longo: **menos rótulos, mais estável**.
 
-- 生成了几张
-- 每张图的用途
-- 保存路径
-- 哪些图最稳，哪些图是可选
+## Instalação no Grok
 
-不要长篇解释风格理论；让图自己说话。
+```powershell
+# Hub (este repo)
+$dest = Join-Path $env:USERPROFILE ".grok\skills\ian-xiaohei-illustrations"
+Copy-Item -Recurse -Force ".\ian-xiaohei-illustrations" $dest
+```
+
+Opcional — skills irmãs completas:
+
+```powershell
+# Após clonar os repos oficiais
+Copy-Item -Recurse -Force ".\ian-xiaohei-scenes\ian-xiaohei-scenes" (Join-Path $env:USERPROFILE ".grok\skills\ian-xiaohei-scenes")
+Copy-Item -Recurse -Force ".\ian-handdrawn-ppt\ian-handdrawn-ppt" (Join-Path $env:USERPROFILE ".grok\skills\ian-handdrawn-ppt")
+```
+
+Com as três instaladas, o hub **roteia**; a execução profunda usa o pacote irmão se presente.
+
+## Uso típico
+
+```text
+Use a skill ian-xiaohei-illustrations (hub Ian).
+Para o texto abaixo: roteie o modo certo e gere as imagens no Grok.
+Se for método → illustrations; se for dor/situação → scenes; se for deck → handdrawn-ppt.
+```
+
+```text
+Modo scenes: 3 cenas Xiaohei 2.0 com objeto real sobre pressão de release.
+```
+
+```text
+Modo handdrawn-ppt: 1 Capa 20:9 (Grok) + 4 páginas 16:9 sobre Clean Core.
+```
+
+```text
+Híbrido: capa PPT + 3 illustrations de estrutura + 1 scene de manutenção.
+```
+
+## Tom da entrega
+
+Antes: modo escolhido + shot list / blueprint curto.  
+Depois: contagem, uso, caminhos, o que é estável vs opcional.  
+Sem tratado longo de teoria — deixe a imagem falar.
